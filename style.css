@@ -1,0 +1,110 @@
+/* Default HTML tags ======================================================== */
+
+html {
+    /* Credit to Joey Burzynski
+    Adapted from "100 Bytes of CSS to look great everywhere"
+    https://gist.github.com/JoeyBurzynski/617fb6201335779f8424ad9528b72c41 */
+    max-width: 80ch;
+    padding: 0em 1em;
+    margin: auto;
+    line-height: 1.75;
+    font-size: 1.25em;
+}
+
+body {
+    margin: 0em;
+    background-color: #010d0e;
+    color: #ceedee;
+    font-family: Consolas, Menlo, Monaco, Courier New, monospace, serif;
+    display: flex;
+    flex-direction: column;
+}
+
+html, body {
+    height: 100%;
+}
+
+h1 {
+    margin: 0em;
+}
+
+ul {
+    display: flex;
+    list-style: none;
+}
+
+a:link {
+    color: #eddd7f;
+    text-decoration: none;
+}
+
+a:visited {
+    color: #bf924d;
+}
+
+a:hover {
+
+}
+
+a:active {
+
+}
+
+/* Classes ================================================================== */
+
+.all-content {
+    /* All page features fall within here */
+    margin-top: 1em;
+    flex: 1 0 auto;
+}
+
+.main-header {
+    /* Page header, above all other content */
+}
+
+.navigation-links {
+    /* Nav menu or links */
+    padding: 0em;
+}
+
+.navigation-links, ul {
+    padding: 0em;
+    margin: 0em 0em;
+    display: flex;
+    list-style: none;
+}
+
+.navigation-links ul > li {
+    padding: 0em 1.5em; 
+}
+
+.navigation-links, ul > li:first-of-type {
+    padding-left: 0em;
+}
+
+.navigation-links, ul > li:last-of-type {
+    padding-right: 0em;
+}
+
+.main-content {
+    /* Page-specific content, under header and nav links */
+    margin: 1em 0em;
+}
+
+.footer {
+    /* Page footer, below all other content */
+    flex-shrink: 0;
+}
+
+.footer, span {
+    margin: 2em 0em;
+    text-align: center;
+}
+
+.footer > span > .github {
+    color: #c9510c;
+}
+
+.footer > span > .linkedin {
+    color: #0077b5;
+}
