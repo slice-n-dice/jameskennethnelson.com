@@ -60,6 +60,29 @@ a:active {
 
 .main-header {
     /* Page header, above all other content */
+    display: flex;
+    flex-direction: row;
+}
+
+.logo {
+    /* Logo in top-left corner of the page */
+    float: left;
+    flex: 0 1 auto;
+    max-width: 256px;
+    max-height: 164px;
+    width: auto;
+    height: auto;
+}
+
+.header-text {
+    /* Div containing site title and nav features */
+    flex: 0 1 auto;
+    padding-left: 1em;
+}
+
+.site-title {
+    padding-top: 1em;
+    font-size: 2em;
 }
 
 .navigation-links {
@@ -68,14 +91,15 @@ a:active {
 }
 
 .navigation-links, ul {
-    padding: 0em;
+    padding-top: 0.5em;
+    padding-left: 0em;
     margin: 0em 0em;
     display: flex;
     list-style: none;
 }
 
 .navigation-links ul > li {
-    padding: 0em 1.5em; 
+    padding: 0em 1.5em;
 }
 
 .navigation-links, ul > li:first-of-type {
@@ -91,13 +115,17 @@ a:active {
     margin: 1em 0em;
 }
 
+.main-content > p {
+    text-align: justify;
+}
+
 .footer {
     /* Page footer, below all other content */
     flex-shrink: 0;
 }
 
 .footer, span {
-    margin: 2em 0em;
+    padding: 2em 0em;
     text-align: center;
 }
 
@@ -107,4 +135,25 @@ a:active {
 
 .footer > span > .linkedin {
     color: #0077b5;
+}
+
+@media only screen and ((max-width: 800px) or (max-aspect-ratio: 1/1)) {
+    .navigation-links > ul {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    .navigation-links > ul > li {
+        width: 100%;
+        text-align: center;
+        padding: 0em;
+    }
+    .site-title {
+        font-size: 5.2vw;
+    }
+    .logo {
+        --w: calc(vw*100);
+        width: calc((var(--w) / 800) * 256);
+        height: calc((var(--w) / 800) * 164);
+    }
 }
